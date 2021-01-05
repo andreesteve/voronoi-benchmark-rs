@@ -1,0 +1,17 @@
+[package]
+name = "voronoi-benchmark"
+version = "0.1.0"
+authors = ["Andre Esteve <andreesteve@gmail.com>"]
+edition = "2018"
+
+[dependencies]
+voronoi = "0.1.4"
+delaunay2d = "0.0.2"
+voronator = "0.1.0"
+criterion = "0.3.3"
+voronoice = { path = "../voronoi" }
+rand = "0.8.1"
+
+[[bench]]
+name = "compare"
+harness = false
