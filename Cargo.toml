@@ -9,7 +9,7 @@ voronoi = "0.1.4"
 delaunay2d = "0.0.2"
 voronator = "0.1.0"
 criterion = "0.3.3"
-voronoice = { path = "../voronoi" }
+voronoice = { path = "../voronoice", version = "0.0.1" }
 rand = "0.8.1"
 
 [[bench]]
