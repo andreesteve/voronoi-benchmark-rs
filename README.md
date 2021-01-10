@@ -54,7 +54,7 @@ This benchmark should run for about 1 hour and take about 1GB of memory at peak.
 
 Mean values shown below.
 
-| Crate                                             | N=100  | N=500    | N=1k     | N=10k   | N=100k | N=500k | N=1G | N=2G |
+| Crate                                             | N=100  | N=500    | N=1k     | N=10k   | N=100k | N=500k | N=1M | N=2M |
 | ------------------------------------------------- | -------|----------|----------|---------|--------|--------|--------|--------|
 | [delaunay2d](https://crates.io/crates/delaunay2d) | 690 us | 10214 us | 37864 us | N/A     | N/A    | N/A    | N/A    | N/A    |
 | [voronator](https://crates.io/crates/voronator)   | 86 us  | 452 us   | 914 us   | 10.6 ms | 181 ms | 1.16 s | 2.56 s | 5.36 s |
@@ -64,7 +64,7 @@ Mean values shown below.
 
 * N/A = not computed (see note below)
 * k = 1,000
-* G = 1,000,000
+* M = 1,000,000
 
 **NOTE:** delaunay2d's algorithmic complexity seems to be [non-quasilinear](https://en.wikipedia.org/wiki/Time_complexity#Quasilinear_time), so I resticted its tests to only N in [100, 500, 1000] to keep the entire benchmark within 60 minutes execution time. Due to calculating just a few N, it doesn't show nicely in the graph below. But you can find its report [here](target/criterion/Build%20Voronoi%20Cells/delauney2d/report/index.html).
 
