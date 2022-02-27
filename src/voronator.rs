@@ -1,13 +1,13 @@
 use super::{RANGE, generate_random_points};
 use criterion::{BatchSize, Bencher};
-use voronator::*;
+use voronator::{delaunator::Point, VoronoiDiagram};
 
 fn prepare(size: usize) -> Vec<(f64, f64)> {
     generate_random_points(size)
         .collect()
 }
 
-fn build(sites: Vec<(f64, f64)>) -> VoronoiDiagram {
+fn build(sites: Vec<(f64, f64)>) -> VoronoiDiagram<Point> {
     VoronoiDiagram::from_tuple(&(-RANGE, -RANGE), &(-RANGE, -RANGE), &sites).unwrap()
 }
 

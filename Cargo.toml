@@ -7,9 +7,9 @@ edition = "2018"
 [dependencies]
 voronoi = "0.1.4"
 delaunay2d = "0.0.2"
-voronator = "0.1.0"
-criterion = "0.3.3"
-voronoice = { path = "../voronoice", version = "0.0.1" }
+voronator = "0.2.0"
+criterion = "0.3.5"
+voronoice = "0.2.0"
 rand = "0.8.1"
 
 [[bench]]

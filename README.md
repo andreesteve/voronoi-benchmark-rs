@@ -4,7 +4,7 @@ This is a simplistic benchmark of the different [Voronoi diagram](https://en.wik
 
 ## Disclaimer
 
-Please take the results here with a grain of salt. Different crates take different design approaches that are optimized for distinct scenarios and thus will vary in their execution time. For instance, some implementations provide a iterative approach in which the diagram are updated as each site/point is added; others collect all the sites before computing the diagram.
+Please take the results here with a grain of salt. Different crates take different design approaches that are optimized for distinct scenarios and thus will vary in their execution time. For instance, some implementations provide an iterative approach in which the diagram is updated as each site/point is added; others collect all the sites before computing the diagram.
 
 Also not all crates provide the same level of functionality, which may impact their execution time. Please refer to each crate's documentation for more details.
 
@@ -22,7 +22,7 @@ Voronoi diagrams are fun. I wrote my own Voronoi library in Rust, [voronoice](ht
 
 ### Fairness
 
-I tried to be as fair as I could when writing the benchmark for each implementation. Having that said, the benchmark function for each library is heavely based on their documentation examples. If you see some code that could be introducing bias to any of the brenchmarks, please do let me know by filing an issue or send a PR!
+I tried to be as fair as I could when writing the benchmark for each implementation. Having that said, the benchmark function for each library is heavely based on their documentation examples. If you see some code that could be introducing bias in any of the brenchmarks, please do let me know by filing an issue or sending a PR!
 
 ## Running the benchmark
 
@@ -32,16 +32,18 @@ You can run the benchmark by cloning this repository and executing the following
 
 ## Results
 
-Last updated: 2021-01-09
+Last updated: 2022-02-27
 
 ### Crate versions used
 
 | Crate                                             | Version |
 | ------------------------------------------------- | ------- |
 | [delaunay2d](https://crates.io/crates/delaunay2d) | 0.0.2   |
-| [voronator](https://crates.io/crates/voronator)   | 0.1.0   |
+| [voronator](https://crates.io/crates/voronator)   | 0.2.0   |
 | [voronoi](https://crates.io/crates/voronoi)       | 0.1.4   |
-| [voronoice](https://crates.io/crates/voronoice)   | 0.0.1   |
+| [voronoice](https://crates.io/crates/voronoice)   | 0.2.0   |
+
+rustc 1.58.1 (db9d1b20b 2022-01-20)
 
 ### Scenario: Build all Voronoi Cells
 
@@ -56,10 +58,10 @@ Mean values shown below.
 
 | Crate                                             | N=100  | N=500    | N=1k     | N=10k   | N=100k | N=500k | N=1M | N=2M |
 | ------------------------------------------------- | -------|----------|----------|---------|--------|--------|--------|--------|
-| [delaunay2d](https://crates.io/crates/delaunay2d) | 690 us | 10214 us | 37864 us | N/A     | N/A    | N/A    | N/A    | N/A    |
-| [voronator](https://crates.io/crates/voronator)   | 86 us  | 452 us   | 914 us   | 10.6 ms | 181 ms | 1.16 s | 2.56 s | 5.36 s |
-| [voronoi](https://crates.io/crates/voronoi)       | 240 us | 12877 us | 26384 us | 30.2 ms | 416 ms | 2.42 s | 5.10 s | 11.1 s |
-| [voronoice](https://crates.io/crates/voronoice)   | 75 us  | 377 us   | 756 us   | 8.1 ms  | 135 ms | 0.84 s | 1.88 s | 4.04 s |
+| [delaunay2d](https://crates.io/crates/delaunay2d) | 661 us | 9945 us  | 37259 us | N/A     | N/A    | N/A    | N/A    | N/A    |
+| [voronator](https://crates.io/crates/voronator)   | 137 us | 367 us   | 677 us   | 5.8 ms  | 82 ms  | 0.55 s | 1.19 s | 2.59 s |
+| [voronoi](https://crates.io/crates/voronoi)       | 168 us | 909 us   | 1923 us  | 24.6 ms | 346 ms | 2.07 s | 4.47 s | 9.75 s |
+| [voronoice](https://crates.io/crates/voronoice)   | 57 us  | 277 us   | 559 us   | 5.9 ms  | 84 ms  | 0.55 s | 1.21 s | 2.62 s |
 
 
 * N/A = not computed (see note below)
