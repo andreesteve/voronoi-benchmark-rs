@@ -59,9 +59,9 @@ Mean values shown below.
 | Crate                                             | N=100  | N=500    | N=1k     | N=10k   | N=100k | N=500k | N=1M | N=2M |
 | ------------------------------------------------- | -------|----------|----------|---------|--------|--------|--------|--------|
 | [delaunay2d](https://crates.io/crates/delaunay2d) | 661 us | 9945 us  | 37259 us | N/A     | N/A    | N/A    | N/A    | N/A    |
-| [voronator](https://crates.io/crates/voronator)   | 137 us | 367 us   | 677 us   | 5.8 ms  | 82 ms  | 0.55 s | 1.19 s | 2.59 s |
-| [voronoi](https://crates.io/crates/voronoi)       | 168 us | 909 us   | 1923 us  | 24.6 ms | 346 ms | 2.07 s | 4.47 s | 9.75 s |
-| [voronoice](https://crates.io/crates/voronoice)   | 57 us  | 277 us   | 559 us   | 5.9 ms  | 84 ms  | 0.55 s | 1.21 s | 2.62 s |
+| [voronator](https://crates.io/crates/voronator)   | 142 us | 412 us   | 688 us   | 6.1 ms  | 87 ms  | 0.57 s | 1.17 s | 2.60 s |
+| [voronoi](https://crates.io/crates/voronoi)       | 166 us | 900 us   | 1863 us  | 25.5 ms | 351 ms | 2.08 s | 4.52 s | 9.67 s |
+| [voronoice](https://crates.io/crates/voronoice)   | 57 us  | 277 us   | 556 us   | 6.0 ms  | 84 ms  | 0.56 s | 1.23 s | 2.65 s |
 
 
 * N/A = not computed (see note below)
