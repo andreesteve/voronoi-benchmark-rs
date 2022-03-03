@@ -732,7 +732,9 @@ dependencies = [
 
 [[package]]
 name = "voronoice"
-version = "0.1.1"
+version = "0.2.0"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "23acc5e2a7645f62ff9d7d11b46c15819fb1132fc87352a35bb4a9dee3b27d80"
 dependencies = [
  "delaunator",
 ]

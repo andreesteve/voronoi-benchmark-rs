@@ -9,7 +9,7 @@ fn prepare(size: usize) -> Vec<Point> {
 }
 
 fn build(sites: Vec<Point>) -> (Vec<Vec<Point>>, DCEL) {
-    let dcell = voronoi::voronoi(sites, RANGE);
+    let dcell = voronoi::voronoi(sites, 2.0 * RANGE);
     (make_polygons(&dcell), dcell)
 }
 

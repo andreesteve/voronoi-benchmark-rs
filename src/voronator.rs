@@ -8,7 +8,7 @@ fn prepare(size: usize) -> Vec<(f64, f64)> {
 }
 
 fn build(sites: Vec<(f64, f64)>) -> VoronoiDiagram<Point> {
-    VoronoiDiagram::from_tuple(&(-RANGE, -RANGE), &(-RANGE, -RANGE), &sites).unwrap()
+    VoronoiDiagram::from_tuple(&(-RANGE, -RANGE), &(RANGE, RANGE), &sites).unwrap()
 }
 
 pub fn create_benchmark_fn(b: &mut Bencher, size: usize) {
